@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" ;charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/VarlDocs/css/commonMain.css" />
+    <link rel="stylesheet" href="/VarlDocs/css/calculatorCommon.css" />
+    <title>海伦公式</title>
+    <style></style>
+  </head>
+  <body>
+    <div>
+      <p id="output">------</p>
+      <p>a <input id="input1" /></p>
+      <p>b <input id="input2" /></p>
+      <p>c <input id="input3" /></p>
+      <p>S=&#8730;(p(p-a)(p-b)(p-c)),p=(a+b+c)/2</p>
+      <p>
+        <button onclick="operation()">运算&crarr;</button>
+      </p>
+    </div>
+    <script>
+      function operation() {
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        let c = document.getElementById("input3").value;
+        let p = (Number(a) + Number(b) + Number(c)) / 2;
+        let S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        if (a <= 0) {
+          document.getElementById("output").innerHTML = "ERROR";
+        } else if (b <= 0) {
+          document.getElementById("output").innerHTML = "ERROR";
+        } else if (c <= 0) {
+          document.getElementById("output").innerHTML = "ERROR";
+        } else if (p * (p - a) * (p - b) * (p - c) <= 0) {
+          document.getElementById("output").innerHTML = "ERROR";
+        } else {
+          document.getElementById("output").innerHTML = "S= " + S;
+        }
+      }
+    </script>
+  </body>
+</html>

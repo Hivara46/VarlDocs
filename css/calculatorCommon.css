@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+}
+div {
+  border: 2px solid gold;
+  margin: auto;
+  padding: 12px;
+}
+button {
+  color: #66f;
+  border: 2px solid lightblue;
+  font-size: medium;
+}
+p {
+  color: #333;
+  margin: 5px auto;
+}
