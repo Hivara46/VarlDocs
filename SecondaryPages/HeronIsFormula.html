@@ -3,18 +3,53 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html" ;charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="/VarlDocs/css/commonMain.css" />
-    <link rel="stylesheet" href="/VarlDocs/css/calculatorCommon.css" />
+    <link rel="stylesheet" href="../css/commonMain.css" />
+    <link rel="stylesheet" href="../css/calculatorCommon.css" />
     <title>海伦公式</title>
-    <style></style>
   </head>
   <body>
     <div>
       <p id="output">------</p>
-      <p>a <input id="input1" /></p>
-      <p>b <input id="input2" /></p>
-      <p>c <input id="input3" /></p>
-      <p>S=&#8730;(p(p-a)(p-b)(p-c)),p=(a+b+c)/2</p>
+      <p>
+        <math><mi>a</mi></math> <input id="input1" />
+      </p>
+      <p>
+        <math><mi>b</mi></math> <input id="input2" />
+      </p>
+      <p>
+        <math><mi>c</mi></math> <input id="input3" />
+      </p>
+      <p>
+        <math>
+          <mi>S</mi><mo>=</mo>
+          <msqrt>
+            <mi>p</mi>
+            <mo>(</mo>
+            <mi>p</mi>
+            <mo>-</mo>
+            <mi>a</mi>
+            <mo>)</mo>
+            <mo>(</mo>
+            <mi>p</mi>
+            <mo>-</mo>
+            <mi>b</mi>
+            <mo>)</mo>
+            <mo>(</mo>
+            <mi>p</mi>
+            <mo>-</mo>
+            <mi>c</mi>
+            <mo>)</mo>
+          </msqrt>
+        </math>
+        ,
+        <math>
+          <mi>p</mi><mo>=</mo>
+          <mfrac>
+            <mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow>
+            <mrow><mn>2</mn></mrow>
+          </mfrac>
+        </math>
+      </p>
       <p>
         <button onclick="operation()">运算&crarr;</button>
       </p>
@@ -35,7 +70,8 @@
         } else if (p * (p - a) * (p - b) * (p - c) <= 0) {
           document.getElementById("output").innerHTML = "ERROR";
         } else {
-          document.getElementById("output").innerHTML = "S= " + S;
+          document.getElementById("output").innerHTML =
+            "<math><mi>S</mi><mo>=</mo></math>" + S;
         }
       }
     </script>
