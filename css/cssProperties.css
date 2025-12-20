@@ -1,0 +1,19 @@
+#cssTotalTable {
+  border: 2px solid gray;
+}
+em {
+  color: blue;
+}
+h2 {
+  color: blue;
+  margin: 14px;
+}
+h3 {
+  background-color: #afafaf;
+  color: white;
+  margin: 4px 0 0;
+  padding: 4px;
+}
+tr table {
+  width: 100%;
+}

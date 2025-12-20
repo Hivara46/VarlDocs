@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="../css/commonMain.css" />
     <link rel="stylesheet" href="../css/calculatorCommon.css" />
+    <script src="../js/SolvingQuadraticEquationOfOneVariable.js"></script>
     <title>一元二次方程求解</title>
   </head>
   <body>
@@ -29,45 +30,10 @@
         </math>
       </p>
       <p>
-        <button onclick="operation()">运算&crarr;</button>
+        <button onclick="SolvingQuadraticEquationOfOneVariable()">
+          运算&crarr;
+        </button>
       </p>
     </div>
-    <script>
-      function operation() {
-        let a = document.getElementById("input1").value;
-        let b = document.getElementById("input2").value;
-        let c = document.getElementById("input3").value;
-        let z = b * b - 4 * a * c;
-        document.getElementById("output1").innerHTML =
-          "<math><mi>Δ</mi><mo>=</mo></math> " + z;
-        if (z < 0) {
-          let xa = -b / (2 * a);
-          let xb = Math.sqrt(Math.abs(z)) / (2 * a);
-          document.getElementById("output2").innerHTML =
-            "<math><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo></math> " +
-            xa +
-            "-" +
-            xb +
-            "i";
-          document.getElementById("output3").innerHTML =
-            "<math><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo></math> " +
-            xa +
-            "+" +
-            xb +
-            "i";
-        } else if (a == 0) {
-          document.getElementById("output1").innerHTML = "------";
-          document.getElementById("output2").innerHTML = "ERROR";
-          document.getElementById("output3").innerHTML = "------";
-        } else {
-          let x1 = (-b - Math.sqrt(z)) / (2 * a);
-          let x2 = (-b + Math.sqrt(z)) / (2 * a);
-          document.getElementById("output2").innerHTML =
-            "<math><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo></math> " + x1;
-          document.getElementById("output3").innerHTML =
-            "<math><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo></math> " + x2;
-        }
-      }
-    </script>
   </body>
 </html>

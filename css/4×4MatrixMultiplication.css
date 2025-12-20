@@ -1,0 +1,44 @@
+@media (max-width: 640px) {
+  .inputAll {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.inputAll {
+  display: flex;
+  justify-content: space-evenly;
+}
+.inputBlock {
+  border: 2px solid gold;
+  width: min-content;
+}
+.inputCluster {
+  border: 2px solid #333;
+  width: min-content;
+}
+.inputRow {
+  display: flex;
+  width: min-content;
+}
+body {
+  border: 2px solid gold;
+  text-align: center;
+}
+button {
+  border: 2px solid lightblue;
+  color: #66f;
+  font-size: medium;
+}
+input {
+  background-color: blanchedalmond;
+  border: 1px solid #333;
+  width: 2rem;
+}
+p {
+  color: pink;
+  margin: 5px auto;
+}
+table {
+  margin-left: 50%;
+  transform: translate(-50%);
+}

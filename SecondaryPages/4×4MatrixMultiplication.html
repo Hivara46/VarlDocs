@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" ;charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/commonMain.css" />
+    <link rel="stylesheet" href="../css/4×4MatrixMultiplication.css" />
+    <script src="../js/4×4MatrixMultiplication.js"></script>
+    <title>4×4矩阵乘法</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="C0">&nbsp;--&nbsp;</td>
+        <td id="C1">&nbsp;--&nbsp;</td>
+        <td id="C2">&nbsp;--&nbsp;</td>
+        <td id="C3">&nbsp;--&nbsp;</td>
+      </tr>
+      <tr>
+        <td id="C4">&nbsp;--&nbsp;</td>
+        <td id="C5">&nbsp;--&nbsp;</td>
+        <td id="C6">&nbsp;--&nbsp;</td>
+        <td id="C7">&nbsp;--&nbsp;</td>
+      </tr>
+      <tr>
+        <td id="C8">&nbsp;--&nbsp;</td>
+        <td id="C9">&nbsp;--&nbsp;</td>
+        <td id="Ca">&nbsp;--&nbsp;</td>
+        <td id="Cb">&nbsp;--&nbsp;</td>
+      </tr>
+      <tr>
+        <td id="Cc">&nbsp;--&nbsp;</td>
+        <td id="Cd">&nbsp;--&nbsp;</td>
+        <td id="Ce">&nbsp;--&nbsp;</td>
+        <td id="Cf">&nbsp;--&nbsp;</td>
+      </tr>
+    </table>
+    <hr />
+    <div class="inputAll">
+      <div class="inputBlock">
+        <p><strong>A</strong></p>
+        <div class="inputCluster">
+          <div class="inputRow">
+            <input id="A0" />
+            <input id="A1" />
+            <input id="A2" />
+            <input id="A3" />
+          </div>
+          <div class="inputRow">
+            <input id="A4" />
+            <input id="A5" />
+            <input id="A6" />
+            <input id="A7" />
+          </div>
+          <div class="inputRow">
+            <input id="A8" />
+            <input id="A9" />
+            <input id="Aa" />
+            <input id="Ab" />
+          </div>
+          <div class="inputRow">
+            <input id="Ac" />
+            <input id="Ad" />
+            <input id="Ae" />
+            <input id="Af" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="inputBlock">
+        <p><strong>B</strong></p>
+        <div class="inputCluster">
+          <div class="inputRow">
+            <input id="B0" />
+            <input id="B1" />
+            <input id="B2" />
+            <input id="B3" />
+          </div>
+          <div class="inputRow">
+            <input id="B4" />
+            <input id="B5" />
+            <input id="B6" />
+            <input id="B7" />
+          </div>
+          <div class="inputRow">
+            <input id="B8" />
+            <input id="B9" />
+            <input id="Ba" />
+            <input id="Bb" />
+          </div>
+          <div class="inputRow">
+            <input id="Bc" />
+            <input id="Bd" />
+            <input id="Be" />
+            <input id="Bf" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p>
+      <button onclick="MatrixMultiplicationFour()">运算&crarr;</button>
+    </p>
+  </body>
+</html>

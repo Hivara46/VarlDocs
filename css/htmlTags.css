@@ -1,0 +1,13 @@
+.type {
+  background-color: #afafaf;
+}
+h2 {
+  color: orangered;
+  margin: 14px;
+}
+strong {
+  color: white;
+}
+table {
+  border: 2px solid gray;
+}

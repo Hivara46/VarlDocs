@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="../css/commonMain.css" />
     <link rel="stylesheet" href="../css/calculatorCommon.css" />
+    <script src="../js/HeronIsFormula.js"></script>
     <title>海伦公式</title>
   </head>
   <body>
@@ -23,22 +24,9 @@
         <math>
           <mi>S</mi><mo>=</mo>
           <msqrt>
-            <mi>p</mi>
-            <mo>(</mo>
-            <mi>p</mi>
-            <mo>-</mo>
-            <mi>a</mi>
-            <mo>)</mo>
-            <mo>(</mo>
-            <mi>p</mi>
-            <mo>-</mo>
-            <mi>b</mi>
-            <mo>)</mo>
-            <mo>(</mo>
-            <mi>p</mi>
-            <mo>-</mo>
-            <mi>c</mi>
-            <mo>)</mo>
+            <mi>p</mi> <mo>(</mo> <mi>p</mi> <mo>-</mo> <mi>a</mi> <mo>)</mo>
+            <mo>(</mo> <mi>p</mi> <mo>-</mo> <mi>b</mi> <mo>)</mo> <mo>(</mo>
+            <mi>p</mi> <mo>-</mo> <mi>c</mi> <mo>)</mo>
           </msqrt>
         </math>
         ,
@@ -50,30 +38,7 @@
           </mfrac>
         </math>
       </p>
-      <p>
-        <button onclick="operation()">运算&crarr;</button>
-      </p>
+      <p><button onclick="HeronIsFormula()">运算&crarr;</button></p>
     </div>
-    <script>
-      function operation() {
-        let a = document.getElementById("input1").value;
-        let b = document.getElementById("input2").value;
-        let c = document.getElementById("input3").value;
-        let p = (Number(a) + Number(b) + Number(c)) / 2;
-        let S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        if (a <= 0) {
-          document.getElementById("output").innerHTML = "ERROR";
-        } else if (b <= 0) {
-          document.getElementById("output").innerHTML = "ERROR";
-        } else if (c <= 0) {
-          document.getElementById("output").innerHTML = "ERROR";
-        } else if (p * (p - a) * (p - b) * (p - c) <= 0) {
-          document.getElementById("output").innerHTML = "ERROR";
-        } else {
-          document.getElementById("output").innerHTML =
-            "<math><mi>S</mi><mo>=</mo></math>" + S;
-        }
-      }
-    </script>
   </body>
 </html>
