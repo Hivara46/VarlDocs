@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" ;charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/definiteIntegralDemo.css" />
+    <title>定积分demo</title>
+  </head>
+  <body>
+    <li>
+      计算定积分
+      <math>
+        <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>a</mi> </msubsup> <mo>=</mo>
+        <msqrt>
+          <msup> <mi>a</mi> <mn>2</mn> </msup> <mo>-</mo>
+          <msup> <mi>x</mi> <mn>2</mn> </msup>
+        </msqrt>
+        <mi>d</mi> <mi>x</mi>
+      </math>
+      ,( <math><mi>a</mi><mo>&gt;</mo><mn>0</mn></math> )
+    </li>
+    <hr />
+    <p>
+      解：令
+      <math>
+        <mi>x</mi> <mo>=</mo> <mi>a</mi>
+        <mrow> <mi>s</mi> <mi>i</mi> <mi>n</mi> </mrow> <mi>t</mi>
+      </math>
+      ,即
+      <math>
+        <mi>d</mi> <mi>x</mi> <mo>=</mo> <mi>d</mi> <mo>(</mo> <mi>a</mi>
+        <mrow> <mi>s</mi> <mi>i</mi> <mi>n</mi> </mrow> <mi>t</mi> <mo>)</mo>
+        <mo>=</mo> <mi>a</mi> <mrow> <mi>c</mi> <mi>o</mi> <mi>s</mi> </mrow>
+        <mi>t</mi> <mi>d</mi> <mi>t</mi>
+      </math>
+      ，且当 <math><mi>x</mi></math> 从 <math><mn>0</mn></math> 变化到
+      <math><mi>a</mi></math> 时， <math><mi>t</mi></math> 从
+      <math><mn>0</mn></math> 变化到
+      <math>
+        <mfrac> <mo>&pi;</mo> <mn>2</mn> </mfrac>
+      </math>
+      ，从而
+    </p>
+    <p class="code">
+      <math>
+        <msubsup> <mo>&int;</mo> <mn>0</mn> <mi>a</mi> </msubsup> <mo>=</mo>
+        <msqrt>
+          <msup> <mi>a</mi> <mn>2</mn> </msup> <mo>-</mo>
+          <msup> <mi>x</mi> <mn>2</mn> </msup>
+        </msqrt>
+        <mi>d</mi> <mi>x</mi> <mo>=</mo>
+        <msubsup>
+          <mo>&int;</mo> <mn>0</mn>
+          <mfrac>
+            <mfrac> <mo>&pi;</mo> <mn>2</mn> </mfrac>
+          </mfrac>
+        </msubsup>
+        <mi>a</mi> <mrow> <mi>c</mi> <mi>o</mi> <mi>s</mi> </mrow> <mi>t</mi>
+        <mo>×</mo> <mi>a</mi> <mrow> <mi>c</mi> <mi>o</mi> <mi>s</mi> </mrow>
+        <mi>t</mi> <mi>d</mi> <mi>t</mi> <mo>=</mo>
+        <msup> <mi>a</mi> <mn>2</mn> </msup>
+        <msubsup>
+          <mo>&int;</mo> <mn>0</mn> <mfrac> <mo>&pi;</mo> <mn>2</mn> </mfrac>
+        </msubsup>
+        <msup>
+          <mrow> <mi>c</mi> <mi>o</mi> <mi>s</mi> </mrow> <mn>2</mn>
+        </msup>
+        <mi>t</mi> <mi>d</mi> <mi>t</mi>
+      </math>
+    </p>
+    <p class="code">
+      <math>
+        <mo>=</mo> <msup> <mi>a</mi> <mn>2</mn> </msup>
+        <msubsup>
+          <mo>&int;</mo> <mn>0</mn> <mfrac> <mo>&pi;</mo> <mn>2</mn> </mfrac>
+        </msubsup>
+        <mfrac>
+          <mrow>
+            <mn>1</mn> <mo>+</mo>
+            <mrow> <mi>c</mi> <mi>o</mi> <mi>s</mi> </mrow> <mn>2</mn>
+            <mi>t</mi>
+          </mrow>
+          <mrow> <mn>2</mn> </mrow>
+        </mfrac>
+        <mi>d</mi> <mi>t</mi> <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msup> <mi>a</mi> <mn>2</mn> </msup>
+          </mrow>
+          <mrow> <mn>2</mn> </mrow>
+        </mfrac>
+        <mo>(</mo> <mi>t</mi> <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mrow> <mi>s</mi> <mi>i</mi> <mi>n</mi> </mrow> <mn>2</mn>
+            <mi>t</mi>
+          </mrow>
+          <mrow> <mn>2</mn> </mrow>
+        </mfrac>
+        <mo>)</mo>
+        <msubsup>
+          <mo>|</mo> <mn>0</mn> <mfrac> <mo>&pi;</mo> <mn>2</mn> </mfrac>
+        </msubsup>
+        <mo>=</mo> <mfrac> <mn>1</mn> <mn>4</mn> </mfrac> <mo>&pi;</mo>
+        <msup> <mi>a</mi> <mn>2</mn> </msup>
+      </math>
+    </p>
+    <hr />
+  </body>
+</html>
